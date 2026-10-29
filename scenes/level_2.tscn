@@ -1,0 +1,139 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" uid="uid://cxygfkimlrj6f" path="res://assets/teksturer/tileset.png" id="tiles"]
+[ext_resource type="PackedScene" path="res://scenes/spiller.tscn" id="spiller"]
+[ext_resource type="PackedScene" path="res://scenes/mynt.tscn" id="mynt"]
+[ext_resource type="PackedScene" path="res://scenes/pigger.tscn" id="pigger"]
+[ext_resource type="PackedScene" path="res://scenes/flagg.tscn" id="flagg"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4vge2"]
+texture = ExtResource("tiles")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -4, -8, -4)
+7:0/0/physics_layer_0/polygon_0/one_way = true
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_1h5kb"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_4vge2")
+
+[node name="level_2" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_1h5kb")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 327680, 0, 65536, 327680, 0, 131072, 327680, 0, 196608, 327680, 0, 262144, 327680, 0, 327680, 327680, 0, 327693, 0, 1, 327694, 0, 1, 327702, 0, 0, 327703, 0, 0, 327704, 0, 0, 327705, 0, 0, 327706, 0, 0, 327727, 0, 0, 327728, 0, 0, 327729, 0, 0, 327730, 0, 0, 327731, 0, 0, 393216, 327680, 0, 393229, 0, 1, 393230, 0, 1, 393253, 0, 0, 393254, 0, 0, 393255, 0, 0, 393256, 0, 0, 393257, 0, 0, 393286, 0, 1, 393287, 0, 1, 393294, 0, 0, 393295, 0, 0, 393296, 0, 0, 393297, 0, 0, 458752, 327680, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 458774, 0, 0, 458775, 0, 0, 458776, 0, 0, 458780, 0, 0, 458781, 0, 0, 458782, 0, 0, 458783, 0, 0, 458784, 0, 0, 458785, 0, 0, 458786, 0, 0, 458796, 0, 0, 458797, 0, 0, 458798, 0, 0, 458799, 0, 0, 458800, 0, 0, 458801, 0, 0, 458802, 0, 0, 458803, 0, 0, 458804, 0, 0, 458805, 0, 0, 458806, 0, 0, 458807, 0, 0, 458808, 0, 0, 458809, 0, 0, 458810, 0, 0, 458811, 0, 0, 458812, 0, 0, 458813, 0, 0, 458814, 458752, 0, 458815, 458752, 0, 458816, 458752, 0, 458817, 0, 0, 458818, 0, 0, 458819, 0, 0, 458820, 0, 0, 458821, 0, 0, 458822, 0, 0, 458823, 0, 0, 458824, 0, 0, 458825, 0, 0, 458826, 0, 0, 458827, 0, 0, 458828, 0, 0, 458829, 0, 0, 458830, 196608, 0, 458831, 196608, 0, 458832, 196608, 0, 458833, 196608, 0, 524288, 327680, 0, 524289, 196608, 0, 524290, 196608, 0, 524291, 196608, 0, 524292, 196608, 0, 524293, 196608, 0, 524294, 196608, 0, 524295, 196608, 0, 524296, 196608, 0, 524297, 196608, 0, 524298, 196608, 0, 524299, 196608, 0, 524300, 196608, 0, 524301, 196608, 0, 524302, 196608, 0, 524303, 196608, 0, 524304, 196608, 0, 524305, 196608, 0, 524306, 196608, 0, 524307, 196608, 0, 524308, 196608, 0, 524309, 196608, 0, 524310, 196608, 0, 524311, 196608, 0, 524312, 196608, 0, 524313, 65536, 2, 524314, 65536, 2, 524315, 65536, 2, 524316, 196608, 0, 524317, 196608, 0, 524318, 196608, 0, 524319, 196608, 0, 524320, 196608, 0, 524321, 196608, 0, 524322, 196608, 0, 524323, 65536, 2, 524324, 65536, 2, 524325, 65536, 2, 524326, 65536, 2, 524327, 65536, 2, 524328, 65536, 2, 524329, 65536, 2, 524330, 65536, 2, 524331, 65536, 2, 524332, 196608, 0, 524333, 196608, 0, 524334, 196608, 0, 524335, 196608, 0, 524336, 196608, 0, 524337, 196608, 0, 524338, 196608, 0, 524339, 196608, 0, 524340, 196608, 0, 524341, 196608, 0, 524342, 196608, 0, 524343, 196608, 0, 524344, 196608, 0, 524345, 196608, 0, 524346, 196608, 0, 524347, 196608, 0, 524348, 196608, 0, 524349, 196608, 0, 524353, 196608, 0, 524354, 196608, 0, 524355, 196608, 0, 524356, 196608, 0, 524357, 196608, 0, 524358, 196608, 0, 524359, 196608, 0, 524360, 196608, 0, 524361, 196608, 0, 524362, 196608, 0, 524363, 196608, 0, 524364, 196608, 0, 524365, 196608, 0, 524366, 196608, 0, 524367, 196608, 0, 524368, 196608, 0, 524369, 196608, 0)
+
+[node name="mynt1" parent="." instance=ExtResource("mynt")]
+position = Vector2(232, 72)
+
+[node name="mynt2" parent="." instance=ExtResource("mynt")]
+position = Vector2(376, 72)
+
+[node name="mynt3" parent="." instance=ExtResource("mynt")]
+position = Vector2(392, 72)
+
+[node name="mynt4" parent="." instance=ExtResource("mynt")]
+position = Vector2(408, 72)
+
+[node name="mynt5" parent="." instance=ExtResource("mynt")]
+position = Vector2(776, 72)
+
+[node name="mynt6" parent="." instance=ExtResource("mynt")]
+position = Vector2(808, 72)
+
+[node name="mynt7" parent="." instance=ExtResource("mynt")]
+position = Vector2(1256, 72)
+
+[node name="mynt8" parent="." instance=ExtResource("mynt")]
+position = Vector2(616, 88)
+
+[node name="mynt9" parent="." instance=ExtResource("mynt")]
+position = Vector2(648, 88)
+
+[node name="flagg" parent="." instance=ExtResource("flagg")]
+position = Vector2(1288, 88)
+neste_level = "res://scenes/level_3.tscn"
+
+[node name="main" parent="." instance=ExtResource("spiller")]
+position = Vector2(40, 98)
+
+[node name="mynt10" parent="." instance=ExtResource("mynt")]
+position = Vector2(56, 104)
+
+[node name="mynt11" parent="." instance=ExtResource("mynt")]
+position = Vector2(120, 104)
+
+[node name="mynt12" parent="." instance=ExtResource("mynt")]
+position = Vector2(168, 104)
+
+[node name="mynt13" parent="." instance=ExtResource("mynt")]
+position = Vector2(280, 104)
+
+[node name="pigger1" parent="." instance=ExtResource("pigger")]
+position = Vector2(328, 104)
+
+[node name="pigger2" parent="." instance=ExtResource("pigger")]
+position = Vector2(344, 104)
+
+[node name="mynt14" parent="." instance=ExtResource("mynt")]
+position = Vector2(472, 104)
+
+[node name="pigger3" parent="." instance=ExtResource("pigger")]
+position = Vector2(504, 104)
+
+[node name="mynt15" parent="." instance=ExtResource("mynt")]
+position = Vector2(744, 104)
+
+[node name="pigger4" parent="." instance=ExtResource("pigger")]
+position = Vector2(840, 104)
+
+[node name="pigger5" parent="." instance=ExtResource("pigger")]
+position = Vector2(856, 104)
+
+[node name="mynt16" parent="." instance=ExtResource("mynt")]
+position = Vector2(936, 104)
+
+[node name="mynt17" parent="." instance=ExtResource("mynt")]
+position = Vector2(1000, 104)
+
+[node name="mynt18" parent="." instance=ExtResource("mynt")]
+position = Vector2(1016, 104)
+
+[node name="mynt19" parent="." instance=ExtResource("mynt")]
+position = Vector2(1032, 104)
+
+[node name="mynt20" parent="." instance=ExtResource("mynt")]
+position = Vector2(1176, 104)

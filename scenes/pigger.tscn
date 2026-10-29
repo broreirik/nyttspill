@@ -1,0 +1,23 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://script/pigger.gd" id="skript"]
+[ext_resource type="Texture2D" path="res://assets/teksturer/tileset.png" id="tiles"]
+
+[sub_resource type="AtlasTexture" id="pigg"]
+atlas = ExtResource("tiles")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="firkant"]
+size = Vector2(12, 7)
+
+[node name="pigger" type="Area2D"]
+script = ExtResource("skript")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("pigg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("firkant")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

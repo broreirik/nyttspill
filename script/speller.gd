@@ -1,8 +1,28 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 110.0
+const JUMP_VELOCITY = -290.0
+
+@onready var anim = $AnimatedSprite2D
+
+var mynter = 0
+var totalt = 0
+
+
+func _ready() -> void:
+	totalt = get_tree().get_nodes_in_group("mynt").size()
+	$HUD/Label.text = "Mynter: 0 / " + str(totalt)
+
+
+func ta_mynt():
+	mynter += 1
+	$MyntLyd.play()
+	$HUD/Label.text = "Mynter: " + str(mynter) + " / " + str(totalt)
+
+
+func _on_musikk_finished() -> void:
+	$Musikk.play()
 
 
 func _physics_process(delta: float) -> void:
@@ -23,3 +43,21 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+	# snu spilleren
+	if direction > 0:
+		anim.flip_h = false
+	elif direction < 0:
+		anim.flip_h = true
+
+	# animasjoner
+	if not is_on_floor():
+		anim.play("hopp")
+	elif direction:
+		anim.play("gå")
+	else:
+		anim.play("idle")
+
+	# faller ut av banen
+	if position.y > 250:
+		get_tree().reload_current_scene()

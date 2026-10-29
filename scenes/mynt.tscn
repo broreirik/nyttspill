@@ -1,0 +1,69 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" uid="uid://cxygfkimlrj6f" path="res://assets/teksturer/tileset.png" id="tiles"]
+[ext_resource type="Script" path="res://script/mynt.gd" id="skript"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vge2"]
+atlas = ExtResource("tiles")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_coh8c"]
+atlas = ExtResource("tiles")
+region = Rect2(16, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmyi7"]
+atlas = ExtResource("tiles")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ey6mn"]
+atlas = ExtResource("tiles")
+region = Rect2(48, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sxpt"]
+atlas = ExtResource("tiles")
+region = Rect2(64, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pblkq"]
+atlas = ExtResource("tiles")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7hgxy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vge2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_coh8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmyi7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ey6mn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2sxpt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pblkq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 11.0
+}]
+
+[sub_resource type="CircleShape2D" id="sirkel"]
+radius = 5.0
+
+[node name="mynt" type="Area2D" groups=["mynt"]]
+script = ExtResource("skript")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7hgxy")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("sirkel")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

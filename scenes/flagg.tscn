@@ -1,0 +1,55 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://script/flagg.gd" id="skript"]
+[ext_resource type="Texture2D" path="res://assets/teksturer/tileset.png" id="tiles"]
+
+[sub_resource type="AtlasTexture" id="flagg0"]
+atlas = ExtResource("tiles")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="flagg1"]
+atlas = ExtResource("tiles")
+region = Rect2(16, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="flagg2"]
+atlas = ExtResource("tiles")
+region = Rect2(32, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="flagg3"]
+atlas = ExtResource("tiles")
+region = Rect2(48, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="rammer"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("flagg0")
+}, {
+"duration": 1.0,
+"texture": SubResource("flagg1")
+}, {
+"duration": 1.0,
+"texture": SubResource("flagg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("flagg3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="RectangleShape2D" id="firkant"]
+size = Vector2(10, 16)
+
+[node name="flagg" type="Area2D"]
+script = ExtResource("skript")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("rammer")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("firkant")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
