@@ -1,0 +1,70 @@
+[gd_resource type="SpriteFrames" load_steps=18 format=3]
+
+[ext_resource type="Texture2D" path="res://sprites/spiller_ark.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="a1"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a2"]
+atlas = ExtResource("1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a3"]
+atlas = ExtResource("1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a4"]
+atlas = ExtResource("1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a5"]
+atlas = ExtResource("1")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a6"]
+atlas = ExtResource("1")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a7"]
+atlas = ExtResource("1")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a8"]
+atlas = ExtResource("1")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a9"]
+atlas = ExtResource("1")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a10"]
+atlas = ExtResource("1")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a11"]
+atlas = ExtResource("1")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a12"]
+atlas = ExtResource("1")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a13"]
+atlas = ExtResource("1")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a14"]
+atlas = ExtResource("1")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a15"]
+atlas = ExtResource("1")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="a16"]
+atlas = ExtResource("1")
+region = Rect2(32, 128, 32, 32)
+
+[resource]
+animations = [{"frames": [{"duration": 1.0, "texture": SubResource("a1")}, {"duration": 1.0, "texture": SubResource("a2")}, {"duration": 1.0, "texture": SubResource("a3")}, {"duration": 1.0, "texture": SubResource("a4")}], "loop": true, "name": &"idle", "speed": 6.0}, {"frames": [{"duration": 1.0, "texture": SubResource("a5")}, {"duration": 1.0, "texture": SubResource("a6")}, {"duration": 1.0, "texture": SubResource("a7")}, {"duration": 1.0, "texture": SubResource("a8")}, {"duration": 1.0, "texture": SubResource("a9")}, {"duration": 1.0, "texture": SubResource("a10")}], "loop": true, "name": &"run", "speed": 12.0}, {"frames": [{"duration": 1.0, "texture": SubResource("a11")}, {"duration": 1.0, "texture": SubResource("a12")}], "loop": false, "name": &"jump", "speed": 8.0}, {"frames": [{"duration": 1.0, "texture": SubResource("a13")}, {"duration": 1.0, "texture": SubResource("a14")}], "loop": true, "name": &"fall", "speed": 8.0}, {"frames": [{"duration": 1.0, "texture": SubResource("a15")}, {"duration": 1.0, "texture": SubResource("a16")}], "loop": false, "name": &"hurt", "speed": 10.0}]
